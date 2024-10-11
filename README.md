@@ -1,6 +1,7 @@
 # Stripe-Payment-API-integration-using-Angular-and-Node
 Stripe API integration using Angular 12 and Node js 20
 
+
 Home Page
 ============
 
@@ -31,6 +32,28 @@ Invoice List
 ===============
 
 ![image](https://github.com/user-attachments/assets/de5b004a-e3c7-4a50-a7d0-1e48e91d6ff9)
+
+
+
+Following settings need to be change.
+
+Backend/config/config.js
+API_PORT	: 3000, 
+STRIPE_SEC_KEY: "sk_test_**************************",	
+	
+STRIPE_PRODUCT_ID: "prod_QzrK7ZUCR7zA2N",
+STRIPE_PRICE_ID: "price_1Q7rbNSCk0yCjSnEObQZB2Nj",
+STRIPE_INVOICE_PREFIX: "MEDI",
+STRIPE_CURRENCY: "INR",
+STRIPE_REDIRECT_URL:"http://localhost:4200/"
+
+
+Frontend/src/environments/environment.ts
+
+apiurl:'http://localhost:3000/api/',
+stripePublicKey: "pk_test_********************************",
+
+
 
 
 
