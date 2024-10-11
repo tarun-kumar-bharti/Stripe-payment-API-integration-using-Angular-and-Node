@@ -1,0 +1,38 @@
+<div class="container"> 
+
+	<div id="load" style="text-align:center;height:30px;" *ngIf="showloading">
+		Please wait... 
+		<img src="//s.svgbox.net/loaders.svg?fill=maroon&ic=tail-spin" style="width:24px">
+	</div>
+	
+	<div id="load" style="text-align:center;height:30px;" *ngIf="showerror"></div>
+
+  
+	<div style="padding:100px;">
+		<div class="row">  
+		 
+		
+			<div class="col-md-12" *ngIf="pstatus=='paid'" 
+			style="padding: 5px;margin-left: 10px; margin-bottom: 10px;color:#FFF; border-radius: 5px; text-align:center;background-color:#00ca65">Thank you for your order
+				<div style="height:200px;background-color:#FFF;color:#000;">
+					<p style="padding:50px;">We confirmed that we got payment.</p> 
+					<button type="button" class="btn btn-primary"  (click)="bgcolor();" 
+					routerLink="">Continue Shopping</button>
+				 </div>
+			</div> 
+			
+			<div class="col-md-12" *ngIf="pstatus=='unpaid'" 
+			style="padding: 5px;margin-left: 10px; margin-bottom: 10px;color:#FFF; border-radius: 5px; text-align:center;background-color:#ff9797">Payment was unsuccessful
+				<div style="height:200px;background-color:#FFF;color:#000;">
+					<p style="padding:50px;">We were unable to charge.</p> 
+					<button type="button" class="btn btn-primary"  (click)="bgcolor();" 
+					routerLink="">Continue Shopping</button>
+				 </div>
+			</div> 
+			 
+			
+		</div>
+		
+	</div>	
+	
+</div>			

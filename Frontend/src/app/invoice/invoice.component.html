@@ -1,0 +1,41 @@
+<div class="container"> 
+
+	<div id="load" style="text-align:center;height:30px;" *ngIf="showloading">
+		Please wait... 
+		<img src="//s.svgbox.net/loaders.svg?fill=maroon&ic=tail-spin" style="width:24px">
+	</div>
+	
+	<div id="load" style="text-align:center;height:30px;" *ngIf="showerror"></div>
+
+  
+	<div style="padding:100px;">
+		<div class="row">   
+			<div class="col-md-12" *ngIf="invoicelist">  
+				<table class="table table-bordered">
+						<thead>
+						  <tr>
+							<th>Invoice Number</th>
+							<th>Amount</th>
+							<th>Status</th>
+							<th>Created at</th>
+							<th>Download</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr *ngFor="let item of invoicelist">
+							<td>{{item.number}}</td>
+							<td><i class="fa fa-inr"></i> {{item.amount_paid.toLocaleString("en-IN")}}</td>
+							<td>{{item.status}}</td>
+							<td>{{item.created}}</td>
+							<td><a href="{{item.file}}/pdf" target="_blank">Download</a></td>
+						  </tr> 
+						</tbody>
+					  </table> 
+				 
+			</div>  
+			
+		</div>
+		
+	</div>	
+	
+</div>			

@@ -1,0 +1,17 @@
+
+<header class="header">
+	 <p></p>
+</header>
+
+<div class="headerdiv"> 
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link {{pageflag==0 ? ' active' : ''}}" 
+	(click)="bgcolor(0);" type="button" routerLink="">Cart</button>
+	
+    <button class="nav-link {{pageflag==1 ? ' active' : ''}}"  
+	(click)="bgcolor(1);" type="button" routerLink="/invoice">Invoice List</button>
+  
+  </div>
+</nav>
+</div>

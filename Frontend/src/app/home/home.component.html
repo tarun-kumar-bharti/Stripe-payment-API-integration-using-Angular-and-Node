@@ -1,0 +1,110 @@
+<div class="container"> 
+
+	<div id="load" style="text-align:center;height:30px;" *ngIf="showloading">
+		Please wait... 
+		<img src="//s.svgbox.net/loaders.svg?fill=maroon&ic=tail-spin" style="width:24px">
+	</div>
+	
+	<div id="load" style="text-align:center;height:30px;" *ngIf="showerror">
+	
+	</div>
+
+  
+            <div class="card">
+                <div class="row">
+				
+				
+                    <div class="col-md-5">
+                        <div class="card-body">
+                           
+								<p>Customer Details</p>
+								 
+								<div class="input-group mb-2">
+									<input type="text" class="form-control" placeholder="Name" 
+									[(ngModel)]="name" (keyup)="getName(name);">
+								</div>
+								
+								<div class="input-group mb-2">
+									<input type="email" class="form-control" placeholder="Email" 
+									[(ngModel)]="email" (keyup)="getEmail(email);">
+								</div>
+								
+								<div class="input-group mb-2">
+									<input maxlength="10" type="number" class="form-control" placeholder="phone" 
+									[(ngModel)]="phone" (keyup)="getPhone(phone);">
+								</div>
+								
+								<div class="input-group mb-4">
+									<input type="text" class="form-control" placeholder="Address" 
+									[(ngModel)]="address" (keyup)="getAddress(address);">
+								</div>
+                             
+                        </div>
+                    </div>
+					
+                    <div class="col-md-3">
+						<div class="card-body">
+							<p>Checkout Details</p>
+							<div class="input-group mb-2">
+									<img src="assets/images/prod1.jpg" 
+									alt="" class="img-fluid">
+							</div>
+							 
+						</div>
+                    </div>
+					
+					<div class="col-md-4">
+					
+						<div class="card-body">
+							<h4>&nbsp;</h4>
+							<div class="input-group mb-2" style="font-size:25px;text-color:#326992"> 
+								Digital BP Machine 
+							</div>
+							
+							<div class="input-group mb-2">
+								<span>
+									<i class="fa fa-inr" aria-hidden="true"></i> 1,000.00
+								</span>							
+							</div>
+							
+							<div class="input-group mb-2">
+							 
+									<div class="input-group">
+										
+										<div class="button minus">
+											<button type="button" class="btn btn-primary"
+											(click)="getMinValue();"
+											[disabled]=btnmindisabled>
+												<i class="fa fa-minus"></i>
+											</button>
+										</div>
+										
+										<div style="width:50px;text-align:center;color:#000">
+										 {{quantity}}
+										 </div>
+										
+										<div class="button plus">
+											<button type="button" class="btn btn-primary"
+											(click)="getMaxValue();">
+												<i class="fa fa-plus"></i>
+											</button>
+										</div>
+										
+									</div> 
+									
+							</div>
+							
+							<div class="margin-top:10px;">
+								<button type="button" class="btn btn-primary"  style="width:105px;"
+								[disabled]=btndisabled (click)="checkout();">Checkout</button> 
+							</div> 
+							
+						</div>
+					</div>
+					
+                </div>
+            </div>
+          
+ 
+  
+</div>

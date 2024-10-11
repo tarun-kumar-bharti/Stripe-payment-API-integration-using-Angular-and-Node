@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+	<!-- Meta Tag -->
+    <meta charset="utf-8">
+	<base href="/">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name='copyright' content=''>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<!-- Title Tag  -->
+    <title>Angular - Node - Stripe - Integration</title>
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="favicon.png">
+	 
+	<!-- StyleSheet -->
+	
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<!-- Magnific Popup --> 
+	<!-- Font Awesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.css"> 
+	  
+	<script>
+	window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB || window.msIndexedDB;
+	window.IDBKeyRange = window.IDBKeyRange || window.mozIDBKeyRange || window.msIDBKeyRange;
+	if(!window.indexedDB){
+		alert("Your browser is not supported indexdb !");
+	}
+	
+	var db;
+	var request = window.indexedDB.open('democheckout',1);
+	request.onerror = function(event){
+		console.log("error: "+event.target.result);
+	};
+	
+	request.onsuccess = function(event){
+		db = request.result;
+		console.log("success: "+db);
+	};
+	
+	request.onupgradeneeded = function(event){
+		var db = event.target.result;
+		var objectStore = db.createObjectStore("webdata");
+	};	
+	</script>	
+</head>
+<body>
+	<app-root></app-root> 	 
+</body>	
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-migrate-3.0.0.js"></script>
+	<script src="assets/js/jquery-ui.min.js"></script> 
+</html>
