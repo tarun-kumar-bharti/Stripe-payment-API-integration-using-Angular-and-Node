@@ -38,20 +38,29 @@ Invoice List
 Following settings need to be change.
 
 Backend/config/config.js
+
 API_PORT	: 3000, 
+
 STRIPE_SEC_KEY: "sk_test_**************************",	
-	
+
 STRIPE_PRODUCT_ID: "prod_QzrK7ZUCR7zA2N",
+
 STRIPE_PRICE_ID: "price_1Q7rbNSCk0yCjSnEObQZB2Nj",
+
 STRIPE_INVOICE_PREFIX: "MEDI",
+
 STRIPE_CURRENCY: "INR",
+
 STRIPE_REDIRECT_URL:"http://localhost:4200/"
+
 
 
 Frontend/src/environments/environment.ts
 
 apiurl:'http://localhost:3000/api/',
+
 stripePublicKey: "pk_test_********************************",
+
 
 
 
